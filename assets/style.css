@@ -1,28 +1,28 @@
 :root{
 
-    --color-primary:#6f6af8;
-    --color-primary-variant:#5854c7;
-    --color-primary-light :hsl(242, 91%, 69%, 18%);
-    --color-danger:rgb(249, 49, 4);
+    --color-primary:#5651fb;
+    --color-primary-variant:rgb(19, 91, 131);
+    --color-primary-light :hsla(37, 91%, 69%, 0.18);
+    --color-danger:rgb(255, 52, 52);
     --color-danger-light:hsl(346, 87%, 46%, 15%);
-    --color-success:#63ce2a;
+    --color-success:rgb(132, 206, 42);
     --color-danger-light:hsla(346, 92%, 47%, 0.15);
-    --color-gray-1:#f86af3;
-    --color-gray-2:#fa24e5;
+    --color-gray-1:#000000;
+    --color-gray-2:#585858;
 
 
     --color-white:#ffff;
-    --color-light:#ccc;
+    --color-light:#7c93fb;
     --color-light-variant:#626262;
-    --color-bg:#efefef;
+    --color-bg:    #c3c3ff;
     --color-black: #222222;
 
 
-    --color-radius-1:.3rem;
-    --color-radius-2:.5rem;
-    --color-radius-3:.8rem;
-    --color-radius-4:2rem;
-    --color-radius-5:5rem;
+    --border-radius-1:.3rem;
+    --border-radius-2:.5rem;
+    --border-radius-3:.8rem;
+    --border-radius-4:2rem;
+    --border-radius-5:5rem;
 }
 *{
     margin :0;
@@ -37,16 +37,19 @@
     transition : .4s ease;
 }
 body{
-    line-height: 1.6;
-    font-size: 17px;
+    line-height: 1.2;
+    font-size: 15px;
     background: var(--color-bg);
     overflow-x:hidden;
     color: var(--color-gray-1)
 }
 .container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
     max-width: 1620px;
-    margin: 0;
-    width: 90%;
+    /* margin: 0;
+    width: 90%; */
 }
 section{
     margin-top: 2rem;
@@ -56,7 +59,7 @@ h1,h2,h3,h4,h5{
     color: var(--color-black);
 }
 h1{
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1rem 0;
 }
 h2{
@@ -68,7 +71,7 @@ h3{
     margin: .8rem 0 .5rem;
 }
 h4{
-    font-size: 1rem;
+    font-size: 3rem;
 }
 img{
     display: block;
@@ -103,7 +106,7 @@ nav .phone-button{
     overflow: hidden;
 }
 nav .logo h3{
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 300;
     color : var(--color-white);
 }
@@ -137,7 +140,7 @@ nav .nav-profile ul{
     box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.2);
     visibility: hidden;
     opacity: 0;
-    border-radius: (--border-radius-1);
+    border-radius: (--border-radius-1) 0;
     overflow: hidden;
 }
 .nav-profile ul li a{
@@ -154,3 +157,92 @@ nav .nav-profile ul{
 
 }
 /* END NAVBAR*/
+/* Start Category Button*/
+.category-btn{
+    background: var(--color-primary-variant);
+    display: inline-block;
+    color: var(--color-light);
+    padding: 8rem 2 rem;
+    border-radius: var(--border-radius-0) ;
+    margin-right: 5px;
+}
+.category-btn:hover{
+    color: var(--color-black);
+}
+/* END Category Button*/
+
+/*Start General Post*/
+.post-thumb{
+    border-radius: var(--border-radius-2) 0;
+    overflow: hidden;
+    margin-bottom: 1%;
+    border: 0.5rem solid var(--color-gray-2);
+    height: fit-content;
+    /* width: fit-content */
+}
+
+.post-profile{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+    
+}
+.post-profile-img{
+    height: 3.2rem;
+    width: 3.2rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+small{
+    color: var(--color-light-variant);;
+}
+/*End General Post*/
+
+/*START Featured post*/
+.Featured{
+    margin-top: 8rem;
+}
+.featured-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+.Featured.post-thumb{
+    height: fit-content;
+}
+/*END Featured post*/
+/*Start post*/
+.post-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-bottom: 5rem auto;
+  }
+  
+  .post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .post .post-thumb {
+    border: .4rem solid var(--color-gray-2);
+    border-radius: var(--border-radius-4) 0;
+  }
+  
+/*END post*/
+/*Start Category Btn*/
+.category-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+    gap: 1rem;
+    text-align: center;
+}
+.Category{
+    padding: 4rem 0;
+    border-top: 2px solid var(--color-gray-1);
+    border-bottom: 2px solid var(--color-gray-1);
+    background-color: var(--color-light);
+}
+/*End Category Btn*/
